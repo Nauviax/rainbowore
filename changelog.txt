@@ -1,0 +1,78 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025.12.04
+  Changes:
+    - All vanilla ore recipes now have crafting tints set. (Mainly for biochambers)
+    - Compatibility patch for a WIP mod of mine.
+    - Small code cleanups, and added to git.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.7
+Date: 2025.02.15
+  Changes:
+    - Added Chinese locale and improved recipe name generation. (Thanks AstralVoyage!)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.6
+Date: 2024.11.29
+  Changes:
+    - Made biochamber conversion config add "organic-or-hand-crafting" category to mk1 assemblers when enabled. Should be harmless, and means you can enable this option from the start of the game now.
+    - (See 1.1.4, which has now also been reverted.)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2024.11.25
+  Changes:
+    - Previous changes to oil conversion meant recipe now crafts 4x faster, so recipe changed from 10 -> 400 to 5 -> 200 to match other conversions, and reduce crude per second.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2024.11.18
+  Changes:
+    - Made it clearer that enabling biochamber conversion will prevent mk1 assembly machines from having access to the conversion recipes.
+    - (So don't enable it until after early game, if on a rainbow only map)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2024.11.18
+  Changes:
+    - Balance pass for vanilla conversions, and decent amount of code cleanup.
+    - Config option to also allow biochambers to be used for conversion, adding more uses for them on Nauvis. Disabled by default.
+    - Crude oil conversion is now 1:40 rather than 1:10. Oil is normally free, and I noticed that currently a significant amount of rainbow ore is put towards oil.
+    - Uranium conversion is now 2:1 rather than 1:1, to try and account for uranium being rarer, and more closely match uranium ore's weight. Still dirt cheap really.
+    - Adjusted converison recipies order, and additionally oil conversion now uses the crude oil fluid icon.
+    - Probably handle modded fluids better. Conversion yield will be increased. *Might* fail with some mods, so please report any issues.
+    - Significantly reduced code size. Probably won't break stuff. Probably.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2024.11.15
+  Changes:
+    - Fixed size of rainbow ore on belt. (Was half size before, suprised I never noticed this sooner)
+    - Removed some 1.1 code that caused a warning to be logged during startup. (Harmless, but might as well fix it)
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2024.10.26
+  Changes:
+    - Added new trigger research to unlock conversion recipes. Additionally, this also unlocks the chemical plant early so oil can be made.
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2024.10.23
+  Changes:
+    - Updated for Factorio 2.0
+    - Only spawns on Nauvis, as would ruin the point of other planet's mechanics. May add config options in future to change this.
+    - Now uses a whitelist to create resource conversions, rather than a blacklist for ores to exclude. Vanilla ores included by default (Not SA ores)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 2024.07.21
+  Changes:
+    - Added mod option to blacklist specific ores. By default this is the ores added by Space Exploration, though any ores can be blacklisted.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2024.03.26
+  Changes:
+    - Increased crude oil conversion from 25 ore -> 150 oil to 25 ore -> 250 oil. I felt the old ratio resulted in oil consuming too much ore relative to the other resources.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2024.03.23
+  Changes:
+    - Better modded resource support: Now 5 times cheaper and faster to match conversion ratio of vanilla resources. (Whoops)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024.03.23
+  Changes:
+    - Released
