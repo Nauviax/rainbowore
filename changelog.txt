@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 2025.12.06
+  Changes:
+    - Fixed need for "organic-or-hand-crafting" recipes to be allowed in mk1 assembler if biochamber conversion is enabled.
+    - Removed a debugging log() left in.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2025.12.04
   Changes:

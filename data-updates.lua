@@ -52,10 +52,10 @@ local function Process(resource)
             table.insert(recipe.ingredients, ingredient)
         end
     end
-    if is_fluid or additional_ingredients then
-        recipe.category = use_biochamber and "organic-or-chemistry" or "chemistry"
-    else
-        recipe.category = use_biochamber and "organic-or-hand-crafting" or "crafting"
+    recipe.category = (is_fluid or additional_ingredients) and "chemistry" or "crafting"
+    if use_biochamber then
+        recipe.additional_categories = {"organic"}
+        recipe.always_show_made_in = true
     end
     if order then
         recipe.order = order
@@ -63,7 +63,6 @@ local function Process(resource)
         recipe.order = "a[conversion]-e[other]-"..resource.order -- Default to last, which will normally just be non-vanilla resources
     end
     log("Created rainbow ore recipe for "..resource.name)
-    log("color: "..serpent.line(color))
 
     data:extend({recipe})
 end
@@ -126,8 +125,3 @@ data:extend(
         order = "a-a-a",
     }}
 )
-
--- If use_biochamber, then add "organic-or-hand-crafting" to the mk1 assembler, allowing it to craft conversion recipies.
-if use_biochamber and data.raw["assembling-machine"]["assembling-machine-1"] then
-    table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "organic-or-hand-crafting")
-end
